@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <title>Brief</title>
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="logo">
+            <img src="img/logoPng.png" alt="" width="200px">
+        </div>
+        <div class="title"><h1>BRIEF DE PEDIDO DE DIFUSIÓN</h1></div>
+        <div class="sub-title"><h2>Texto para definir objetivo/expliacion del documento</h2></div>
+        <div class="seccion"><h3>FICHA TÉCNICA</h3></div> <!-- Alinear a la izquierda -->
+        <form action="">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="">Nombre de evento</label>
+                        <input type="text" class="form-control" placeholder="Describa el evento en pocas palabras"
+                            maxlength="10">
+                        <small>Descripcion</small>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="">Etiqueta</label>
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div></div>
+            <label for="">Area solicitante</label>
+            <select name="sede" id="sede" class="form-control">
+                <option value="Extension universitaria">Extension universitaria</option>
+                <option value="Inventigacion">Inventigacion</option>
+                <option value="Relaciones Internacionales">Relaciones Internacionales</option>
+                <option value="Promoción educativa">Promoción educativa</option>
+            </select>
+            <div class="form-group">
+                <label for="">Nombre del solicitante</label>
+                <input type="text" class="form-control" placeholder="Nombre y Apellido"
+                    maxlength="10">
+                <small>En caso de tener consultas de la información, con quién seguimos el tema</small>
+            </div>
+
+            <hr>
+            <div class="sub-title">INFORMACIÓN DEL EVENTO</div> <!-- Alinear a la izquierda -->
+
+
+            <label for="">Sede del evento</label>
+            <select name="sede" id="sede" class="form-control">
+                <option value>Seleccionar...</option>
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="La Rioja">La Rioja</option>
+                <option value="Santo Tome">Santo Tome</option>
+                <option value="Todas">Online</option>
+            </select>
+            <div class="form-group">
+                <div class="form-check">
+                    <div class="row">
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="">Streamign</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="">Streamign</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="form-check-input">
+                            <label for="">Streamign</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary">Crear</button>
+        </form>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
