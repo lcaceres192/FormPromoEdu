@@ -32,12 +32,22 @@
             FICHA TÉCNICA
         </div>
         <form action="">
+            <div class="row justify-content-end">
+                
+                <div class="col-md-4">
+                    <div class="form-group">
+                    <label for="nOrden">N° de Orden</label>
+                    <input type="number" class="form-control" id="nOrden" readonly>
+                </div>
+            </div>
+            </div>
+            
             <div class="row">
                 <div class="col-md">
                     <div class="form-group">
                         <label for="nombreEvento">Nombre de evento</label>
-                        <input type="text" class="form-control" placeholder="Describa el evento en pocas palabras"
-                            maxlength="10" id="nombreEvento" >
+                        <input type="text" class="form-control" placeholder="Descripción del evento en pocas palabras"
+                            maxlength="70" id="nombreEvento" >
                         <small class="form-text text-muted">Descripcion</small>
                     </div>
                 </div>
