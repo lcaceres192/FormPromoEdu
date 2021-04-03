@@ -1,9 +1,9 @@
-function getRndInteger(min, max) {
+/* function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
 let random = getRndInteger(100, 999);
-document.getElementById("rnd").value = random;
+document.getElementById("rnd").value = random; */
 
 let date = new Date();
 let year = date.getFullYear();
