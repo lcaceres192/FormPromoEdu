@@ -13,6 +13,8 @@
         rel="stylesheet">
 
     <script defer src="js/main.js"></script>
+    <script defer src="js/pdfmake.min.js"></script>
+    <script defer src="js/vfs_fonts.js"></script>
 
     <title>Brief</title>
 </head>
@@ -33,28 +35,27 @@
         </div>
         <form action="">
             <div class="row justify-content-end">
-                
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="form-group">
-                    <label for="nOrden">N° de Orden</label>
-                    <input type="number" class="form-control" id="nOrden" readonly>
+                        <label for="nOrden">N° de Orden</label>
+                        <input type="number" class="form-control" id="nOrden" readonly>
+                    </div>
                 </div>
             </div>
-            </div>
-            
+
             <div class="row">
                 <div class="col-md">
                     <div class="form-group">
                         <label for="nombreEvento">Nombre de evento</label>
                         <input type="text" class="form-control" placeholder="Descripción del evento en pocas palabras"
-                            maxlength="70" id="nombreEvento" >
+                            maxlength="70" id="nombreEvento">
                         <small class="form-text text-muted">Descripcion</small>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="fecha">Fecha</label>
-                        <input type="date" class="form-control"  id="fecha" readonly>
+                        <input type="date" class="form-control" id="fecha" readonly>
                     </div>
                 </div>
             </div>
