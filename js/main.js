@@ -38,12 +38,25 @@ function crearPDF() {
     sedeEvento = document.getElementById("sede").value
 
     var docDefinition = {
-        content: [`Numero de orden: ${orden}`,
-        `Fecha: ${ffecha}`,
-        `Nombre del Evento: ${nEvento}`,
-        `Area: ${areaSolicitante}`,
-        `Solicitante: ${nombreSolicitante}`,
-        `Sede: ${sedeEvento}`,
+        info: {
+            title: `Brief de pedido de difusion: ${nEvento}`,
+            author: `${nombreSolicitante}`,
+            subject: 'subject of document',
+            keywords: 'keywords for document',
+        },
+
+        content: [
+            `Numero de orden: ${orden}`,
+            `Fecha: ${ffecha}`,
+            `Nombre del Evento: ${nEvento}`,
+            `Area: ${areaSolicitante}`,
+            `Solicitante: ${nombreSolicitante}`,
+            `Sede: ${sedeEvento}`,
+            
+
+
+
+            
 
         ]
     };
@@ -56,6 +69,6 @@ function crearPDF() {
 
 }
 
-var docDefinition = { content: `Numero de orden: ${orden}` }; /* `Numero de orden: ${varia}`,  content: [ ] */
+/* var docDefinition = { content: `Numero de orden: ${orden}` }; / `Numero de orden: ${varia}`,  content: [ ] /
 
-docDefinition.content = `Numero de orden: ${orden}`;
+docDefinition.content = `Numero de orden: ${orden}`; */
