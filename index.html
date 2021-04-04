@@ -61,7 +61,7 @@
             </div>
             <div class="form-group">
                 <label for="">Area solicitante</label>
-                <select name="sede" id="sede" class="form-control">
+                <select name="sede" id="area" class="form-control">
                     <option value="">Seleccionar Area...</option>
                     <option value="Extension universitaria">Extension universitaria</option>
                     <option value="Inventigacion">Inventigacion</option>
@@ -71,7 +71,7 @@
             </div>
             <div class="form-group">
                 <label for="">Nombre del solicitante</label>
-                <input type="text" class="form-control" placeholder="Nombre y Apellido" maxlength="10">
+                <input type="text" class="form-control" placeholder="Nombre y Apellido" maxlength="10" id="nSolicitante">
                 <small class="form-text text-muted">Indicar quien con quien resolver dudas del pedido.</small>
             </div>
 
@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn btn-primary">Crear</button>
+            <button type="button" onclick="crearPDF()" class="btn btn-primary">Crear</button>
         </form>
 
 
