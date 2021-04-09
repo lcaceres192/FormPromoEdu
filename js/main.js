@@ -4,6 +4,14 @@ let nEvento;
 let areaSolicitante;
 let nombreSolicitante;
 let sedeEvento;
+let obje;
+let dEven;
+let hInicio;
+let hFin;
+let mailRefe;
+let programa;
+let diser;
+let obs;
 
 
 /* Genrador de numero de Orden */
@@ -36,6 +44,16 @@ function crearPDF() {
     areaSolicitante = document.getElementById("area").value
     nombreSolicitante = document.getElementById("nSolicitante").value
     sedeEvento = document.getElementById("sede").value
+    obje = document.getElementById("objetivo").value
+    dEven = document.getElementById("diaEvento").value
+    hInicio = document.getElementById("horaInicio").value
+    hFin = document.getElementById("horaFin").value
+    mailRefe = document.getElementById("emailSolicitante").value
+    programa = document.getElementById("prog").value
+    diser = document.getElementById("disertante").value
+    obs = document.getElementById("obser").value
+
+    
 
     var docDefinition = {
         info: {
@@ -52,10 +70,14 @@ function crearPDF() {
             `Area: ${areaSolicitante}`,
             `Solicitante: ${nombreSolicitante}`,
             `Sede: ${sedeEvento}`,
-            
-
-
-
+            `Objetivo difusión: ${obje}`,
+            `Día del evento: ${dEven}`,
+            `Hora de inicio: ${hInicio}`,
+            `Hora de fin: ${hFin}`,
+            `Email de referente: ${mailRefe}`,
+            `Programa del evento: ${programa}`,
+            `Disertante: ${diser}`,
+            `Observaciones: ${obs}`,
             
 
         ]
