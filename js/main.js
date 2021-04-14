@@ -53,34 +53,107 @@ function crearPDF() {
     diser = document.getElementById("disertante").value
     obs = document.getElementById("obser").value
 
-    
+
 
     var docDefinition = {
-        info: {
+        /* info: {
             title: `Brief de pedido de difusion: ${nEvento}`,
             author: `${nombreSolicitante}`,
             subject: 'subject of document',
             keywords: 'keywords for document',
-        },
+        }, */
+
+        /*  content: [
+             `Numero de orden: ${orden}`,
+             `Fecha: ${ffecha}`,
+             `Nombre del Evento: ${nEvento}`,
+             `Area: ${areaSolicitante}`,
+             `Solicitante: ${nombreSolicitante}`,
+             `Sede: ${sedeEvento}`,
+             `Objetivo difusión: ${obje}`,
+             `Día del evento: ${dEven}`,
+             `Hora de inicio: ${hInicio}`,
+             `Hora de fin: ${hFin}`,
+             `Email de referente: ${mailRefe}`,
+             `Programa del evento: ${programa}`,
+             `Disertante: ${diser}`,
+             `Observaciones: ${obs}`,
+             
+ 
+         ] */
 
         content: [
-            `Numero de orden: ${orden}`,
-            `Fecha: ${ffecha}`,
-            `Nombre del Evento: ${nEvento}`,
-            `Area: ${areaSolicitante}`,
-            `Solicitante: ${nombreSolicitante}`,
-            `Sede: ${sedeEvento}`,
-            `Objetivo difusión: ${obje}`,
-            `Día del evento: ${dEven}`,
-            `Hora de inicio: ${hInicio}`,
-            `Hora de fin: ${hFin}`,
-            `Email de referente: ${mailRefe}`,
-            `Programa del evento: ${programa}`,
-            `Disertante: ${diser}`,
-            `Observaciones: ${obs}`,
-            
+            {
+                text: 'BRIEF DE PEDIDO DE DIFUSIÓN',
+                style: 'header',
+                alignment: 'center'
+            },
+            {
+                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ipsam libero voluptates? Est sit cupiditate nihil alias odit qui totam?',
+                style: 'subheader',
+                alignment: 'center'
+            },
+            {
+                layout: 'lightHorizontalLines', // optional
+                table: {
+                    // headers are automatically repeated if the table spans over multiple pages
+                    // you can declare how many rows should be treated as headers
+                    headerRows: 1,
+                    widths: ['*', 'auto', 100, '*'],
 
-        ]
+                    body: [
+                        [{ text: 'Ficha tecnica', colSpan: 4, aligment: 'left' }, {}, {}, {}],
+                        /* [ 'First', 'Second', 'BRIEF DE PEDIDO DE DIFUSIÓN', 'The last one' ], */
+                        [`Sede: `, `${sedeEvento}`, `Fecha: `, `${ffecha}`],
+                        [`Objetivo difusión:`, `${obje}`, {}, {}],
+                        [`Sede: `, `${sedeEvento}`, `Fecha: `, `${ffecha}`],
+                    ]
+                }
+            },
+
+            {
+                layout: 'lightHorizontalLines', // optional
+                table: {
+                    // headers are automatically repeated if the table spans over multiple pages
+                    // you can declare how many rows should be treated as headers
+                    headerRows: 1,
+                    widths: ['*', 'auto', 100, '*'],
+
+                    body: [
+                        [{ text: 'INFORMACIÓN DEL EVENTO', colSpan: 4, aligment: 'left' }, {}, {}, {}],
+                        /* [ 'First', 'Second', 'BRIEF DE PEDIDO DE DIFUSIÓN', 'The last one' ], */
+                        [`Numero de orden:`, `${orden}`, `Fecha: `, `${ffecha}`],
+                        [{ text: `Nombre del Evento:` }, `${nEvento}`, {}, {}],
+                        [{ text: `Nombre del Evento:` }, `${nEvento}`, {}, {}]
+                    ]
+                }
+            }
+
+        ],
+
+        styles: {
+            header: {
+                fontSize: 36,
+                bold: true,
+                margin: [0, 0, 0, 10]
+            },
+            subheader: {
+                fontSize: 16,
+
+                margin: [0, 10, 0, 10]
+            },
+            tableExample: {
+                margin: [0, 5, 0, 15]
+            },
+            tableHeader: {
+                bold: true,
+                fontSize: 13,
+                color: 'black'
+            }
+        }
+
+
+
     };
 
 
