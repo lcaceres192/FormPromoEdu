@@ -37,7 +37,7 @@
             <div class="row justify-content-end">
                 <div class="col-md-3">
                     <div class="form-group">
-                        <label for="nOrden">N° de Orden</label>
+                        <label for="nOrden">N° de referencia</label>
                         <input type="number" class="form-control" id="nOrden" readonly>
                     </div>
                 </div>
@@ -50,66 +50,84 @@
                         <input type="text" class="form-control"
                             placeholder="Breve texto para identificarlo o exponer de qué trata" maxlength="70"
                             id="nombreEvento">
-                        <small class="form-text text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit.</small>
+
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="fecha">Fecha</label>
-                        <input type="date" class="form-control" id="fecha" readonly>
-                    </div>
-                </div>
+
             </div>
             <div class="form-group">
-                <label for="">Area solicitante</label>
+                <label for="">Área solicitante</label>
                 <select name="sede" id="area" class="form-control">
-                    <option value="">Seleccionar Area...</option>
-                    <option value="Extension universitaria">Extension universitaria</option>
-                    <option value="Inventigacion">Inventigacion</option>
-                    <option value="Relaciones Internacionales">Relaciones Internacionales</option>
-                    <option value="Promoción educativa">Promoción educativa</option>
+                    <option value="">Seleccionar Área...</option>
+                    <option value="Extension universitaria">Alumnos</option>
+                    <option value="Inventigacion">Extensión</option>
+                    <option value="Relaciones Internacionales">Institucionales</option>
+                    <option value="Promoción educativa">Internacionales</option>
+                    <option value="Extension universitaria">Investigación</option>
+                    <option value="Inventigacion">Promoción Educativa</option>
+                    <option value="Relaciones Internacionales">Vicerectorado</option>
+                    <option value="Promoción educativa">Otros</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="">Solicitante</label>
                 <input type="text" class="form-control" placeholder="Nombre y Apellido" maxlength="40"
                     id="nSolicitante">
-                <small class="form-text text-muted">Indicar quien con quien resolver dudas del pedido.</small>
+                <small class="form-text text-muted">Persona de contacto para resolver dudas e inquietudes sobre el pedido.</small>
             </div>
 
             <hr>
-            <div class="sub-title">INFORMACIÓN DEL EVENTO</div> <!-- Alinear a la izquierda -->
+            
+            <div class="form-group">
+                <label for="">Tipo de comunicación</label>
+                <select name="sede" id="area" class="form-control">
+                    <option value="">Seleccionar Área...</option>
+                    <option value="Extension universitaria">Convocatoria</option>
+                    <option value="Inventigacion">Comunicado institucional</option>
+                    <option value="Relaciones Internacionales">Comunicado para alumnos</option>
+                    <option value="Promoción educativa">Evento</option>
+                    <option value="Extension universitaria">Salutación</option>
+                </select>
+            </div>
+
+            <div class="sub-title">INFORMACIÓN PARA LAS PIEZAS DE COMUNICACIÓN</div> <!-- Alinear a la izquierda -->
 
             <div class="form-group">
-                <label for="">Sede del evento</label>
+                <label for="">Sede</label>
                 <select name="sede" id="sede" class="form-control">
                     <option value>Seleccionar sede...</option>
                     <option value="Buenos Aires">Buenos Aires</option>
                     <option value="La Rioja">La Rioja</option>
                     <option value="Santo Tome">Santo Tome</option>
-                    <option value="Todas">Online</option>
+                    <!-- <option value="Todas">Online</option> -->
                 </select>
             </div>
             <div class="form-group">
-                <label for="objetivo">Objetivo de difusión</label>
+                <label for="objetivo">Detalle del pedido</label>
                 <textarea class="form-control" name="" id="objetivo" cols="30" rows="4"
-                    placeholder="Posicionar a la institucion dentro del ambito deseado."></textarea>
+                    placeholder="Incluir información detallada de lo que se está solicitando.&NewLine;Incluir información a saber: antecedentes de la comunciación a realizar, objetivos, motivo del evento/comunicación, efemérides relacionada, relevancia para la institución de lo que se comunicará."></textarea>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="form-group">
-                        <label for="diaEvento">Día del evento</label>
+                        <label for="diaEvento">Fecha inicio evento</label>
                         <input type="date" class="form-control" maxlength="70" id="diaEvento">
+                        <small class="form-text text-muted">En caso de ser una convocatoria ó comunicado a partir de qué fecha y hasta cuando tiene vigencia</small>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="form-group">
                         <label for="fecha">Hora inicio</label>
                         <input type="time" class="form-control" id="horaInicio">
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="diaEvento">Fecha fin evento</label>
+                        <input type="date" class="form-control" maxlength="70" id="finEvento">
+                    </div>
+                </div>
+                <div class="col-md-3">
                     <div class="form-group">
                         <label for="fecha">Hora fin</label>
                         <input type="time" class="form-control" id="horaFin">
@@ -121,32 +139,28 @@
                 <label for="emailSolicitante">MAIL / TEL. DE CONTACTO PARA DESTINATARIOS DE LA PIEZA DE DIFUSIÓN</label>
                 <input type="text" class="form-control" placeholder="ejemplo@barcelo.edu.ar; ejemplo@barcelo.edu.ar"
                     maxlength="40" id="emailSolicitante">
-                <small class="form-text text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</small>
+                <small class="form-text text-muted">Este mail/Teléfono será el que seincluya en todas las piezas de comunicación generadas.</small>
             </div>
 
             <div class="form-group">
                 <label for="prog">PROGRAMA DEL EVENTO</label>
                 <textarea class="form-control" name="" id="prog" cols="30" rows="4"
-                    placeholder="Tratar de responder los diferentes interrogantes que aun nos interrogan."></textarea>
-                <small class="form-text text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</small>
+                    placeholder="Detalle del evento. Incluir:&NewLine;nombre del módulo/disertación - Disertante {incluir último título obtenido - nombre y apellido y matrícula (Ejemplo: Lic. Nombre y apellido(MP XX))} - Entidad a la que representa"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="disertante">Disertantes</label>
                 <textarea class="form-control" name="" id="disertante" cols="30" rows="4"
                     placeholder="Prof. Dr. Juan Perez&NewLine;Prof. Dr. Juan Perez"></textarea>
-                <small class="form-text text-muted">Incluir mini CV que especifique cargo actual y último.</small>
+                <small class="form-text text-muted">Incluir mini CV que especifique cargo actual e información de relevancia referida a la temática que presenta.</small>
             </div>
 
             <div class="form-group">
                 <label for="obser">Observaciones</label>
-                <textarea class="form-control" name="" id="obser" cols="30" rows="4"
-                    placeholder="Tratar de responder los diferentes interrogantes que aun nos interrogan."></textarea>
-                <small class="form-text text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</small>
+                <textarea class="form-control" name="" id="obser" cols="30" rows="4"></textarea>
             </div>
 
-
-            <div class="form-group">
+<!--             <div class="form-group">
                 <div class="form-check">
                     <div class="row">
                         <div class="col-md-4">
@@ -163,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <button type="button" onclick="crearPDF()" class="btn btn-primary">Crear</button>
         </form>
 
